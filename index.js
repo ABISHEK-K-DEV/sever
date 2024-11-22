@@ -244,7 +244,14 @@ require("dotenv").config(); // Load environment variables
 const app = express();
 
 // Middleware
-app.use(cors({ origin: 'https://client-1-theta.vercel.app/' })); // Replace '*' with your frontend domain for production
+// app.use(cors({ origin: 'https://client-1-theta.vercel.app/' })); // Replace '*' with your frontend domain for production
+app.use(cors({
+  origin: [
+    'https://client-1-c2zm4pmwc-abisheks-projects-d2e76424.vercel.app',
+    'https://client-1-ten.vercel.app'
+  ]
+}));
+
 app.use(express.json());
 
 // MongoDB Schema & Model
